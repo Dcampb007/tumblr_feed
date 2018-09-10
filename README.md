@@ -65,7 +65,7 @@ Time spent: **X** hours spent in total
 
 The following **required** user stories are complete:
 
-- [ ] User can tab an image to view a larger image in a detail view (5pts)
+- [x] User can tab an image to view a larger image in a detail view (5pts)
 
 The following **stretch** user stories are implemented:
 
@@ -79,14 +79,14 @@ The following **additional** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
+1. When do I have to make an outlet for things and when do I not. I'm confused on when to create custom classes or when to just put a image in the view and use that one.
 2.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/ibsG4Q5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

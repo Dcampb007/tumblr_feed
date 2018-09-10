@@ -42,6 +42,9 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -56,12 +59,20 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
             // 2.
             let originalSize = photo["original_size"] as! [String: Any]
             // 3.
-            let urlString = originalSize["url"] as! String
+            cell.urlString = originalSize["url"] as! String
             // 4.
-            let url = URL(string: urlString)
+            let url = URL(string: cell.urlString)
             cell.photoImageView.af_setImage(withURL: url!)
         }
         return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! PhotoCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let photosDetailViewController = segue.destination as! PhotosDetailViewController
+            photosDetailViewController.photoURL = cell.urlString
+        }
+        
     }
 
 }
